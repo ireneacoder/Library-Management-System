@@ -18,7 +18,6 @@
   justify-content: center;
   flex-direction: column;
   z-index: 1;
-
 }
 .header{
   width: 45%;
@@ -42,10 +41,11 @@
   padding-right: 3rem;
   border-radius: 0.325rem;
   cursor: pointer;
-  transition: all 100ms ease-in-out;
+  /* transition: all 100ms ease-in-out; */
 }
 
 .library:hover{
+  
   background-color: #21387c;
   color: #FFFFFF;
 }
