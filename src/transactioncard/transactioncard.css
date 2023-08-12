@@ -1,0 +1,45 @@
+
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+.transaction-profile{
+    background-color: #0965B8;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.name-time{
+    display: flex;
+    flex-direction: column;
+    gap: -3rem;  
+}
+.tname{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.date-time{
+    font-size: 1.325rem;
+    font-weight: 400;
+    color: #898989;
+    margin-top: -2rem;
+}
+.space{
+    width: 26rem;
+}
+.amount{
+    font-size: 1.625rem;
+    color: #0965B8;
+    font-weight: 700;
+
+}

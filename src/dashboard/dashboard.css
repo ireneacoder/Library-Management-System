@@ -1,5 +1,7 @@
 .dashboard-main-container{
     display: flex;
+    margin-left: 24rem;
+    /* margin-right: 10rem; */
 }
 .nav-container{
     max-width: 20rem;
