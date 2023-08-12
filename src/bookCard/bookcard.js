@@ -1,10 +1,20 @@
 
 import Button from '../button/button'
 import './bookcard.css'
+import { useState } from 'react';
+import PopupDialog from '../popupdialog/popupdialog';
 
 export default function Bookcard(props){
+
+    const [showDialog, setShowDialog] = useState(false);
+
+    const closeDialog = () => {
+        setShowDialog(false);
+    }
+
     return(
         <>
+            {showDialog && <PopupDialog imgurl={props.imgurl} closeDialog={closeDialog} />}
             
             <div className='out'>
                 <img src='/bookcover.png' className='image'></img>
@@ -14,8 +24,8 @@ export default function Bookcard(props){
                 </div>
                 <p className='book-detail'>{props.bookid}</p>
                 <p className='book-details'>{props.author}</p>
-                <div className='button-align'>
-                    <Button buttonname='Make Updates'/>
+                <div className='button-align' >
+                    <Button buttonname='Make Updates' onClick={setShowDialog}/>
                 </div>
                 
             </div>

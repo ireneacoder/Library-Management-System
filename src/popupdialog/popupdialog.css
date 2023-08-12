@@ -1,0 +1,72 @@
+
+.dialog-wrapper{
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(108, 145, 255, 0.55);
+    z-index: 1;
+    padding: 0px;
+
+}
+
+.dialog-container{
+
+    position: fixed;
+    left: 35%;
+    top: 25%;
+    z-index: 2;
+    background-color: #ffffff;
+}
+
+.inner-container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width:36vw;
+    height: 40vh;
+}
+.ptitle{
+
+    font-size:2.3rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+}
+.description{
+    margin-top: -1.225rem;
+    font-size: 1.325rem;
+    font-weight: 400;
+    color: #666666;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 6px;
+    top: 5vh;
+    right: 50px;
+    height: 40px;
+    width: 40px;
+    font-size: 7rem;
+    cursor: pointer; ;
+}
+.btnflex{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.closeBtn{
+    font-size: 26px;
+    margin: 0px;
+    color:#666666; 
+}
