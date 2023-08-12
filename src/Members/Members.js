@@ -1,7 +1,9 @@
 
 import './Members.css'
-export default function members(){
+export default function Members(){
     return(
+        <>
+        </>
 
     )
 }

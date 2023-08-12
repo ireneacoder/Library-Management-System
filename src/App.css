@@ -41,7 +41,7 @@
   padding-right: 3rem;
   border-radius: 0.325rem;
   cursor: pointer;
-  /* transition: all 100ms ease-in-out; */
+  transition: all 100ms ease-in-out;
 }
 
 .library:hover{
