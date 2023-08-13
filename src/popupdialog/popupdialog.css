@@ -15,11 +15,11 @@
 .dialog-container{
 
     position: fixed;
-    left: 29%;
+    left: 35%;
     top: 25%;
     z-index: 2;
     background-color: #ffffff;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .inner-container {
