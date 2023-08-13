@@ -1,0 +1,24 @@
+
+.del{
+    border: none;
+    background-color: #F14F4F;
+    padding: 2rem 4rem;
+    border-radius: 0.375rem;
+    padding: 0.9375rem 3.0625rem;
+    color: #ffffff;
+    font-size: 1.325rem;
+}
+
+.cancel{
+    border: solid;
+    border-width: 0.1rem;
+    border-color: #0965B8;
+    background-color: #FFFFFF;
+    padding: 2rem 4rem;
+    border-radius: 0.375rem;
+    padding: 0.9375rem 3.0625rem;
+    color: #0965B8;
+    font-size: 1.325rem;
+    font-weight: 500;
+
+}

@@ -41,6 +41,7 @@
     font-size: 1.525rem;
     margin-bottom: 3rem;
     font-weight: 500;
+    cursor: pointer;
 }
 .userdetails{
     display: flex;

@@ -19,6 +19,7 @@
     top: 25%;
     z-index: 2;
     background-color: #ffffff;
+    padding: 3rem;
 }
 
 .inner-container {
@@ -27,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 4rem 6rem;
     width:36vw;
     height: 40vh;
 }
@@ -62,6 +63,7 @@
     margin-top: 2rem;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     gap: 0.625rem;
 }
 

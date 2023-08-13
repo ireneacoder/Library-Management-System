@@ -1,0 +1,11 @@
+.poptitle{
+    font-size: 2.25rem;
+    font-weight: 650;
+    color: #0965B8;
+}
+.textboxes{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-bottom: 2rem;
+}

@@ -13,15 +13,6 @@ const PopupDialog = (props) => {
             <div className="dialog-wrapper" onClick={props.closeDialog}></div>
             <div className="dialog-container">
                 <div className="inner-container">
-                    {/* <p className='poptitle'> Add New Member</p> */}
-
-                    {/* <TextField
-                        size="medium"
-                        sx={{width: '36vw'}}
-                        label="Name"
-                        id="outlined-start-adornment"
-                        variant="outlined"
-                    /> */}
 
                     <p className='ptitle'>Do you want to make updates to <br/>this Book?</p>
                     <p className='description'>Select if the book is available or not</p>

@@ -25,11 +25,12 @@
     color: #9e9e9e;
 }
 .book-list{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     column-gap: 2rem;
-    row-gap: 1rem;
-
+    row-gap: 1rem; */
+    display: flex;
+    gap: 1rem;
 }
 .back-next{
     display: flex;
