@@ -7,21 +7,25 @@ import { useState, useEffect } from "react";
 import Addmemberpopup from "../addmemberpopup/addmemberpopup";
 import React from "react";
 import axios from "axios";
+import {useForm} from 'react-hook-form';
 
 export default function Members(props) {
+  const {handleSubmit,register}=useForm()
   const [add, setadd] = useState(false);
-
+  const [myData, setMyData] = useState(false);
+  async function loadMember(data) {
+    const res = await axios.post("http://127.0.0.1:5000/getMembers",data);
+    console.log(data);
+    setMyData(res.data);
+  }
   const closeDialog = () => {
     setadd(false);
   };
-  const [myData, setMyData] = useState(false);
-  const getApiData = async () => {
-    const res = await axios.get("http://127.0.0.1:5000/getMembers");
-    console.log(res.data);
-    setMyData(res.data);
-  };
   useEffect(() => {
-    getApiData();
+    axios.post("http://127.0.0.1:5000/getMembers",{'name':''})
+    .then((response)=>{
+      setMyData(response.data)
+    })
   }, []);
 
   return (
@@ -30,13 +34,15 @@ export default function Members(props) {
         <Addmemberpopup imgurl={props.imgurl} closeDialog={closeDialog} />
       )}
 
-      <div className="horizontal-flex">
+      <form onSubmit = {handleSubmit(loadMember)}className="horizontal-flex">
         <div className="searchbar">
           <FiSearch size={25} />
-          <p className="search-text"> Search for Members</p>
+          <input {...register('name')} placeholder='Search' type='text' className="search-text"/> 
         </div>
-        <Button buttonname="Search" />
-      </div>
+        <button className='button'>
+                Search
+            </button>
+      </form>
 
       <button className="addmember" onClick={setadd}>
         <AiOutlinePlus size={30} /> Add Member
@@ -47,7 +53,8 @@ export default function Members(props) {
           myData.map((item) => {
             return (
               <Membercard
-                key={item._id}
+                id={item['memberID']}
+                key={item['memberID']}
                 username={item["name"]}
                 depth={item["debt"]}
               />

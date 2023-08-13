@@ -5,21 +5,30 @@ import { FiX } from "react-icons/fi";
 import { TextField, InputAdornment } from "@mui/material";
 import Button from '../button/button';
 import React from 'react';
+import {useForm} from 'react-hook-form'
+import axios from 'axios';
 
 
 const Updatepopup = (props) => {
+    const {register,handleSubmit} = useForm()
+    function update(data){
+        
+        axios.post("http://127.0.0.1:5000/updateMember",{...data,'id':props.id})
+        props.close()
+        window.location.reload()
+    }
     return(
-
         <div className='box'>
 
             <div className="dialog-wrapper" onClick={props.close}></div>
             <div className="dialog-container">
-                <div className="inner-container">
+                <form onSubmit = {handleSubmit(update)} className="inner-container">
                     <p className='poptitle'> Update Details </p>
 
                     <div className='textboxes'>
 
                         <TextField
+                        {...register("name")}
                             size="medium"
                             sx={{width: '36vw'}}
                             label="Name"
@@ -28,6 +37,7 @@ const Updatepopup = (props) => {
                         />
 
                         <TextField
+                        {...register("address")}
                             size="medium"
                             sx={{width: '36vw'}}
                             label="Address"
@@ -36,31 +46,18 @@ const Updatepopup = (props) => {
                         />
 
                         <TextField
+                        {...register("dob")}
                             size="medium"
                             sx={{width: '36vw'}}
                             label="DOB"
                             id="outlined-start-adornment"
                             variant="outlined"
                         />
-
-                            <TextField
-                            size="medium"
-                            sx={{width: '36vw'}}
-                            label="Number of Books Issued"
-                            id="outlined-start-adornment"
-                            variant="outlined"
-                        />
-
-                            <TextField
-                            size="medium"
-                            sx={{width: '36vw'}}
-                            label="Depth"
-                            id="outlined-start-adornment"
-                            variant="outlined"
-                        />
                     </div>
 
-                    <Button buttonname='Update Details'/>
+                    <button className='button'>
+                        Update
+                    </button>
 
                     <div className="icon-container" onClick={props.close}>
 
@@ -68,7 +65,7 @@ const Updatepopup = (props) => {
                     </div>
 
                    
-                </div>
+                </form>
 
 
             </div>

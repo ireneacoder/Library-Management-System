@@ -12,11 +12,9 @@ const Addmemberpopup = (props) => {
   };
   const { register, handleSubmit } = useForm();
   function addmember(data) {
-    let formData = new FormData();
-    formData.append("name", "lily");
-    formData.append("address", "xyz");
-    formData.append("dob", "0002-02-02");
-    axios.post("http://127.0.0.1:5000/addMember", { body: { data } });
+    axios.post("http://127.0.0.1:5000/addMember", data)
+    .then((res)=>{console.log(res)})
+    window.location.reload()
   }
   return (
     <div className="box">

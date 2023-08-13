@@ -24,9 +24,9 @@ export default function Bookcard(props){
                 </div>
                 <p className='book-detail'>{props.bookid}</p>
                 <p className='book-details'>{props.author}</p>
-                <div className='button-align' >
+                {/* <div className='button-align' >
                     <Button buttonname='Make Updates' onClick={setShowDialog}/>
-                </div>
+                </div> */}
                 
             </div>
         

@@ -4,8 +4,15 @@ import './deletepopup.css'
 import { FiX } from "react-icons/fi";
 import { TextField, InputAdornment } from "@mui/material";
 import Button from '../button/button';
+import {useState,useEffect} from "react"
+import axios from 'axios'
 
-const Deletepopup = (props) => {
+function Deletepopup (props){
+    function deletemember(){
+        axios.post("http://127.0.0.1:5000/deleteMember",{'id':props.id})
+        props.closee()
+        window.location.reload()
+    }
 
 
     return (
@@ -19,8 +26,8 @@ const Deletepopup = (props) => {
                     <p className='description'>Deleting the member may lead to permanent removal of the user data.</p>
                     <div className='btnflex'>
                         
-                        <button className='del'>Delete Member </button>
-                        <buton className='cancel'>Cancel</buton>
+                        <button onClick = {deletemember} className='del'>Delete Member </button>
+                        <buton onClick={props.closee} className='cancel'>Cancel</buton>
                     </div>
 
                     <div className="icon-container" onClick={props.closee}>

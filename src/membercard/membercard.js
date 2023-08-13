@@ -39,10 +39,10 @@ export default function Membercard(props){
     return( 
         <>
 
-            {show && <Issuepopup imgurl={props.imgurl} closeDialog={closeDialog} />}
-            {back && <Returnpopup imgurl={props.imgurl} closed={closed} />}
-            {update && <Updatepopup imgurl={props.imgurl} close={close} />}
-            {del && <Deletepopup imgurl={props.imgurl} closee={closee} />}
+            {show && <Issuepopup id = {props.id} imgurl={props.imgurl} closeDialog={closeDialog} />}
+            {back && <Returnpopup id = {props.id} imgurl={props.imgurl} closed={closed} />}
+            {update && <Updatepopup id = {props.id} imgurl={props.imgurl} close={close} />}
+            {del && <Deletepopup id = {props.id } imgurl={props.imgurl} closee={closee} />}
             
 
             <div className ='outerdiv'>
@@ -50,7 +50,7 @@ export default function Membercard(props){
                 <div className='verticle-flex'>
                     <p className='username'>{props.username}</p>
                     <p className='count'>{props.bookcount}</p>
-                    <p className='count'>{props.depth}</p>
+                    <p className='count'>₹{props.depth}</p>
                 </div>
                 <div className='gap'></div>
                 <Button buttonname='Issue Book' onClick={setshow}/>
