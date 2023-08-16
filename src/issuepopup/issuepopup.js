@@ -8,14 +8,20 @@ import Button from '../button/button';
 import React from 'react';
 import {useForm} from 'react-hook-form'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const Issuepopup = (props) => {
     const {register,handleSubmit} = useForm()
+    const navigate = useNavigate()
     function issue(data){
         
         axios.post("http://127.0.0.1:5000/issueBook",{...data,'memberID':props.id})
         props.closeDialog()
+        setTimeout(() => {
+            
+        }, 500);
+        navigate(0)
         window.location.reload()
     }
     return(

@@ -63,7 +63,8 @@ export default function Books(){
                         bookname={item['title'].slice(0,15)+'...'}
                         bookrent ={item['isAvailable']?'₹100':'out of stock'}
                         bookid = {item['isbn']}
-                        author = {item['authors']}/>
+                        author = {item['authors']}
+                        publisher = {item['publisher']}/>
 
                         )
                     })

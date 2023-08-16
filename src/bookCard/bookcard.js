@@ -14,7 +14,8 @@ export default function Bookcard(props){
 
     return(
         <>
-            {showDialog && <PopupDialog imgurl={props.imgurl} closeDialog={closeDialog} />}
+            {showDialog && <PopupDialog name ={props.bookname} id ={props.bookid} publisher={props.publisher} author={props.author} imgurl={props.imgurl} closeDialog={closeDialog} />}
+
             
             <div className='out'>
                 <img src='/bookcover.png' className='image'></img>

@@ -135,6 +135,40 @@ def deleteBook():
         return f"Deleted {cursor.rowcount} items!"
     except:
         return f"Internal server error!"
+    
+
+
+
+@app.route('/setBookActive', methods = ['POST'])
+def setBookActive():
+    connect =sqlite3.connect('database.db')
+    cursor = connect.cursor()
+    req = request.json
+
+    bookID = req['isbn']; 
+    try:
+        cursor.execute(f"delete from Books where bookID ={int(bookID)}")
+        connect.commit()
+        return f"Success!"
+    except:
+        return f"Internal Server Error!"
+    
+
+@app.route('/setBookInactive', methods = ['POST'])
+def setBookInactive():
+    connect =sqlite3.connect('database.db')
+    cursor = connect.cursor()
+    req = request.json
+
+    bookID = req['isbn']
+    title = req['title']; author=req['authors']; publisher=['publisher']
+    try:
+        cursor.execute(f"insert into BOOKS(bookID, title, authors, publisher) values(?,?,?,?)", (bookID, title, author, publisher ))
+        connect.commit()
+        return f"Book is now Out of Stock!"
+    except:
+        return f"Internal Server Error!"
+
 
 
 
