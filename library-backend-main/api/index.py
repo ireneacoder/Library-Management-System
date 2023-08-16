@@ -44,7 +44,7 @@ def getBooks():
     for book in response:
         book['isAvailable'] = 1
         temp = cursor.execute("SELECT * FROM BOOKS WHERE title like (?)", (book['title'], )).fetchall()
-        print(temp, book['title'])
+        # print(temp, book['title'])
         if temp: book['isAvailable'] = 0
     
     return response
