@@ -46,7 +46,7 @@ const Addmemberpopup = (props) => {
               {...register("dob")}
               size="medium"
               sx={{ width: "36vw" }}
-              label="DOB"
+              label="DOB (yyyy-mm-dd)"
               id="outlined-start-adornment"
               variant="outlined"
             />

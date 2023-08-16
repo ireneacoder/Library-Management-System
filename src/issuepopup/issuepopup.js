@@ -42,7 +42,7 @@ const Issuepopup = (props) => {
                         {...register('doi')}
                             size="medium"
                             sx={{width: '36vw'}}
-                            label="Date of Issue"
+                            label="Date of Issue (yyyy-mm-dd)"
                             id="outlined-start-adornment"
                             variant="outlined"
                         />

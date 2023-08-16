@@ -4,31 +4,34 @@
     background-color: #FFFFFF;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     border-radius: 1.125rem;
     padding: 1rem;
     box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.12);
     margin-top: 6rem;
-    width: 16rem;
+    width: 18rem;
 
 }
 .image{
-    height:16rem
+    height:15.8rem;
+    width: 17.8rem;
 }
 .name-rent{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
+    /* gap: 5rem; */
     
 }
 .book-name{
     font-size: 1.15rem;
     font-weight: 700;
+    width: 12ren;
 }
 .book-rent{
     font-size: 0.675;
     color: #0965B8;
     font-weight: 600 ;
+    width: 9rem;
+    text-align: right;
     
 }
 .book-detail{
@@ -40,6 +43,7 @@
     font-weight: 600;
     margin-top: -0.6rem;
     width: 16rem;
+    margin-bottom: 1.625rem;
 }
 .button-align{
     display: flex;

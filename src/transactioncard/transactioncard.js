@@ -13,7 +13,7 @@ export default function Transactioncard(props){
 
                 </div>
                 <div className='space'></div>
-                <p className='amount'>{props.amount}</p>
+                <p className='amount'>₹ {props.amount}</p>
 
             </div>
         

@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Updatepopup from '../updatepopup/updatepopup';
 import Returnpopup from '../returnpopup/returnpopup';
 import Deletepopup from '../deletepopup/deletpopup';
+import axios from 'axios';
 
 export default function Membercard(props){
 
@@ -30,9 +31,19 @@ export default function Membercard(props){
         const closee = () => {
             setdel(false);
         }
+    function clearDebt(){
+        const date = new Date();
 
-    
-    
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        let currentDate = `${day}-${month}-${year}`
+
+        axios.post('http://127.0.0.1:5000/clearDebt', {'memberID': props.id, 'dot': currentDate} )
+        window.location.reload()
+        alert('Debt Cleared')
+    }
     
     
 
@@ -55,6 +66,7 @@ export default function Membercard(props){
                 <div className='gap'></div>
                 <Button buttonname='Issue Book' onClick={setshow}/>
                 <Button buttonname='Return Book' onClick={setback}/>
+                <Button buttonname='Clear Debt'onClick={clearDebt}/>
                 <Button buttonname ='Update' onClick={setupdate}/>
                 <button className='deletebutton' onClick={setdel}><FiTrash2 size={25}/></button>
 

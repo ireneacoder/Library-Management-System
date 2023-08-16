@@ -15,7 +15,7 @@ CORS(app)
 # print(cursor.execute("select * from books").fetchall())
 # pp = cursor.execute('select count(memberID) from issues where memberID = 1').fetchall()
 # print(pp[0][0])
-# cursor.execute(f"delete from issues where bookID = '088001508X'")
+# cursor.execute(f"delete from transaction")
 # # for i in range(3,4):
 # #     response = requests.get(f"https://frappe.io/api/method/frappe-library?page={i}")
 # #     if response.status_code == 200:
@@ -123,8 +123,19 @@ def returnBooks():
         return f"Internal server error!"
     
     
-    
-    
+@app.route('/deleteBook', methods = ['POST'])
+def deleteBook():
+    connect = sqlite3.connect('database.db')
+    cursor = connect.cursor()
+    req = request.json
+
+    try:
+        cursor.execute("delete from BOOKS where bookID = (?)", (req['bookID'],))
+        connect.commit()
+        return f"Deleted {cursor.rowcount} items!"
+    except:
+        return f"Internal server error!"
+
 
 
 # =====================================================================================================
@@ -210,6 +221,8 @@ def clearDebts():
     
     try:
         temp = cursor.execute("SELECT debt FROM MEMBERS where memberID=(?)", (id, )).fetchall(); currDebt = temp[0][0]
+        if currDebt==0:
+            return f"All debts of member with ID {id} cleared!"
         
         cursor.execute("insert into TRANSACTIONS(memberID, amount, dot) values(?,?,?)", (id, currDebt, dot))
         cursor.execute(f"update members set debt = 0 where memberID=(?)", (id, ))
@@ -220,7 +233,23 @@ def clearDebts():
         return f"Internal Server Error!"
     
     
-    
+@app.route('/getTransaction', methods = ['GET'])  
+def getTransaction():
+    connect = sqlite3.connect('database.db')
+    cursor = connect.cursor()    
+
+    res = cursor.execute(f"select * from TRANSACTIONS").fetchall()
+    ans = []
+    for transaction in res:
+        name = cursor.execute(f" select name from MEMBERS where memberID=(?)", (transaction[1], )).fetchall()[0][0]    
+        temp = {}
+        temp['amount']= transaction[2]
+        temp['dot']=transaction[3]
+        temp['name']= name
+        ans.append(temp)
+
+    return ans
+
     
     
 @app.route('/load', methods = ['GET'])

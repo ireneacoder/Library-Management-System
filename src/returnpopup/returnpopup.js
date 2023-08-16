@@ -39,7 +39,7 @@ const Returnpopup = (props) => {
                         {...register('dor')}
                             size="medium"
                             sx={{width: '36vw'}}
-                            label="Date of Return"
+                            label="Date of Return (yyyy-mm-dd)"
                             id="outlined-start-adornment"
                             variant="outlined"
                         />
