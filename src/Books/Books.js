@@ -60,7 +60,7 @@ export default function Books(){
                     myBook.map((item)=>{
                         return(
                         <Bookcard
-                        bookname={item['title'].slice(0,15)+'...'}
+                        bookname={item['title']}
                         bookrent ={item['isAvailable']?'₹100':'out of stock'}
                         bookid = {item['isbn']}
                         author = {item['authors']}

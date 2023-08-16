@@ -15,7 +15,7 @@ CORS(app)
 # print(cursor.execute("select * from books").fetchall())
 # pp = cursor.execute('select count(memberID) from issues where memberID = 1').fetchall()
 # print(pp[0][0])
-# cursor.execute(f"delete from transaction")
+# cursor.execute(f"delete from books")
 # # for i in range(3,4):
 # #     response = requests.get(f"https://frappe.io/api/method/frappe-library?page={i}")
 # #     if response.status_code == 200:
@@ -44,7 +44,7 @@ def getBooks():
     for book in response:
         book['isAvailable'] = 1
         temp = cursor.execute("SELECT * FROM BOOKS WHERE title like (?)", (book['title'], )).fetchall()
-        
+        print(temp, book['title'])
         if temp: book['isAvailable'] = 0
     
     return response
@@ -161,7 +161,7 @@ def setBookInactive():
     req = request.json
 
     bookID = req['isbn']
-    title = req['title']; author=req['authors']; publisher=['publisher']
+    title = req['title']; author=req['authors']; publisher=req['publisher']
     try:
         cursor.execute(f"insert into BOOKS(bookID, title, authors, publisher) values(?,?,?,?)", (bookID, title, author, publisher ))
         connect.commit()

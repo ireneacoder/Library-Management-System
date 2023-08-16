@@ -27,6 +27,7 @@ const PopupDialog = (props) => {
 
     return (
         <div className='box'>
+            {/* onSubmit={(e)=>{e.preventDefault()}} */}
 
             <div className="dialog-wrapper" onClick={props.closeDialog}></div>
             <div className="dialog-container">
@@ -34,7 +35,7 @@ const PopupDialog = (props) => {
 
                     <p className='ptitle'>Do you want to make updates to <br/>this Book?</p>
                     <p className='description'>Select if the book is available or not</p>
-                    <form onSubmit={(e)=>{e.preventDefault()}} className='btnflex'>
+                    <form  className='btnflex'>
                         {/* <Button buttonname='Book in Stock'/> */}
                         <button className='button' onClick={setBookActive}> Book in Stock</button>
                         <button className='button' onClick={setBookInactive}>Book Out of Stock</button>

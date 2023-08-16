@@ -20,7 +20,7 @@ export default function Bookcard(props){
             <div className='out'>
                 <img src='/bookcover.png' className='image'></img>
                 <div className='name-rent'>
-                    <p className='book-name'>{props.bookname}</p>
+                    <p className='book-name'>{props.bookname.slice(0,15)+'...'}</p>
                     <p className='book-rent'>{props.bookrent}</p>
                 </div>
                 <div>
