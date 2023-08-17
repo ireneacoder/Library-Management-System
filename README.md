@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# Library Management System 📚
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application-based library management system built using Flask, ReactJs, and SQLite. This web app allows a librarian to track books, manage members, and keep track of members' debt. 
 
-## Available Scripts
+## Table of Contents 📑
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Requirements](#requirements)
+- [Screenshots](#screenshots)
+- [Usage](#usage)
+- [Features](#features)
+- [License](#license)
 
-### `npm start`
+## Installation 🛠️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To set up the project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Go to the target folder where you want to build your project. For example: `C:\Users\ASUS>`
 
-### `npm test`
+2. Open a terminal and initialize Git:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git init
+    ```
 
-### `npm run build`
+3. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/ireneacoder/Library-Management-System.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. To install the required backend dependencies, navigate to the `library-backend-main` directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd library-backend-main
+   pip install -r requirements.txt
+   ```
 
-### `npm run eject`
+5. Open a new terminal in your main folder and install frontend dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ThE frontend is also hosted globally on [Vercel](https://library-management-system-six.vercel.app/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run the globally hosted version:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Go to the target folder where you want to build your project. For example: `C:\Users\ASUS>`
 
-## Learn More
+2. Clone the `library-backend-main` folder in the target folder:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    git clone --depth=1 --filter=blob:none https://github.com/ireneacoder/Library-Management-System.git --path library-backend-main
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Navigate to the `library-backend-main` directory:
 
-### Code Splitting
+    ```bash
+    cd library-backend-main
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Install the backend dependencies:
 
-### Analyzing the Bundle Size
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. In the target folder cd to the api folder by the following command:
+    ```bash 
+    cd library-backend-main/api
+    ```
+5. Open a terminal in the target folder and run the following command to start the backend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash 
+python index.py
+```
 
-### Making a Progressive Web App
+5. Access the application in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Requirements 📋
 
-### Advanced Configuration
+* Python 3 or above (preferably Python version >= **Python v3.8**)
+* Pip package manager for installing Python packages.
+* Nodejs & NPM Package Manager for frontend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Screenshots 📸
 
-### Deployment
+* Homepage:\
+![Homepage](folder link)
+* Make Updates:\
+![Make Updates](folder link)
+* Members:\
+![Members](folder link)
+* Issue Book:\
+![Issue Book](folder link)
+* Return Book:\
+![Return Book](folder link)
+* Update Details:\
+![Update Details](folder link)
+* Delete Member:\
+![Delete Member](folder link)
+* Transaction:\
+![Transaction](folder link)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Usage 🚀
 
-### `npm run build` fails to minify
+Once the project is set up and running, users can perform various actions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Search Books**: Search for a particular book.
+- **Update Books**: Make updates to book status (in stock or out of stock).
+- **Create Members**: Add new members.
+- **Search Member**: Search for members.
+- **Delete Member**: Remove a member.
+- **Update Member**: Update member details.
+- **Issue Book**: Issue books to members.
+- **Return Book**: Allow members to return books.
+- **Clear Debt**: Clear member debts.
+
+## Features ✨
+
+- CRUD operations on books database using Frappe API.
+- CRUD operations on members database using Frappe API.
+- User-friendly interface.
+
+## Contributing 🤝
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request describing your changes and referencing related issues.
+
+Please ensure your code adheres to the existing style and includes appropriate test coverage.
+
+## License 📄
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Support 📞
+
+If you encounter issues or have questions/suggestions, [open an issue](https://github.com/ireneacoder/Library-Management-System) in this repository. We value your feedback and will assist you.
+
+## Authors 👩‍💻
+
+- [PRERNA VERMA](https://github.com/ireneacoder) - Project Lead
+
+## Project Status 🚀
+
+🚀 Deployment: This project is currently live and operational.
+
+🛑 Updates: We are not actively updating the project at the moment. Please refer to the project roadmap for upcoming enhancements and features. Your feedback is valuable to us!
