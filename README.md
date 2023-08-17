@@ -86,9 +86,9 @@ python index.py
 ## Screenshots 📸
 
 * Homepage:\
-* ![Hompage](https://github.com/ireneacoder/Library-Management-System/assets/63922114/f74854a6-cc97-431f-bdf3-e4f71f64bf45)
+ ![Hompage](https://github.com/ireneacoder/Library-Management-System/assets/63922114/f74854a6-cc97-431f-bdf3-e4f71f64bf45)
 * Make Updates:\
-![Make Updates](folder link)
+![Make Updates](https://github.com/ireneacoder/Library-Management-System/assets/63922114/862922d0-90b2-4020-b261-6b274a6ed0a0)
 * Members:\
 ![Members](folder link)
 * Issue Book:\
