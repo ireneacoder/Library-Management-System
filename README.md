@@ -4,12 +4,12 @@ A web application-based library management system built using Flask, ReactJs, an
 
 ## Table of Contents 📑
 
-- [Installation](#installation)
-- [Requirements](#requirements)
-- [Screenshots](#screenshots)
-- [Usage](#usage)
-- [Features](#features)
-- [License](#license)
+- [Installation](#installation-🛠️)
+- [Requirements](#requirements-📋)
+- [Screenshots](#screenshots-📸)
+- [Usage](#usage-🚀)
+- [Features](#features-✨)
+- [License](#license-📄)
 
 ## Installation 🛠️
 
