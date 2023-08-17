@@ -86,7 +86,7 @@ python index.py
 ## Screenshots 📸
 
 * Homepage:\
-![Homepage](folder link)
+![Homepage](Frappe resources/Screenshot 2023-08-17 080117.png)
 * Make Updates:\
 ![Make Updates](folder link)
 * Members:\
