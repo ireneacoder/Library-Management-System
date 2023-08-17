@@ -87,20 +87,22 @@ python index.py
 
 * Homepage:\
  ![Hompage](https://github.com/ireneacoder/Library-Management-System/assets/63922114/f74854a6-cc97-431f-bdf3-e4f71f64bf45)
+* Books:\
+![Screenshot 2023-08-17 080304](https://github.com/ireneacoder/Library-Management-System/assets/63922114/2a9dd39f-574b-43f7-8bd6-c4bc59d6da33)
 * Make Updates:\
 ![Make Updates](https://github.com/ireneacoder/Library-Management-System/assets/63922114/862922d0-90b2-4020-b261-6b274a6ed0a0)
 * Members:\
-![Members](folder link)
+![Members](https://github.com/ireneacoder/Library-Management-System/assets/63922114/ed64cdbf-b38a-4dc1-ad3b-fe9d49963c01)
 * Issue Book:\
-![Issue Book](folder link)
+![Issue Book](https://github.com/ireneacoder/Library-Management-System/assets/63922114/80e365df-40ac-48e1-95b4-6c4634e1cfc3)
 * Return Book:\
-![Return Book](folder link)
+![Return Book](https://github.com/ireneacoder/Library-Management-System/assets/63922114/c83d2426-0ed1-4807-9a35-fa76cac4c529)
 * Update Details:\
-![Update Details](folder link)
+![Update Details](https://github.com/ireneacoder/Library-Management-System/assets/63922114/f1afca04-8a32-42c2-90d1-353f96ac6eb7)
 * Delete Member:\
-![Delete Member](folder link)
+![Delete Member](https://github.com/ireneacoder/Library-Management-System/assets/63922114/65dd4707-45c0-4c86-b755-69ebf95e23f6)
 * Transaction:\
-![Transaction](folder link)
+![Transactions](https://github.com/ireneacoder/Library-Management-System/assets/63922114/6a2374b6-e769-4a27-a7d8-de593de49b0a)
 
 ## Usage 🚀
 
